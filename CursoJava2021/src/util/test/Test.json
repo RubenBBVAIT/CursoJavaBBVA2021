@@ -1,0 +1,5 @@
+{"tipo":1,"nombre":"cua1", "valores":"l=10.0"} ,
+{"tipo":2,"nombre":"cir1", "valores":"r=10.0"} ,
+{"tipo":4,"nombre":"triangulo1", "valores":"b=10.0-h=8.4"} ,
+{"tipo":3,"nombre":"rect1", "valores":"b=12.3-h=8.4"} ,
+{"tipo":5,"nombre":"polig1", "valores":"l=10.0-n=6-a=6.2"} 
