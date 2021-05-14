@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<form >
+		<label>Figura: </label>
+	<select onChange="cambioSelect()" name="mySelect" id="mySelect">
+		<option value ="Borrar" id="Borrar">Selecciona una Opción</option>
+		<option></option>
+		<option></option>
+		<option></option>
+		<option></option>
+		<option></option>
+	</select>
+</br>
+
+</br>
+	<label id = "label0" hidden="true">Nombre:</label>
+	<input type="text" name="textarea0" id="textarea0" hidden="true">
+
+</br>
+</br>
+
+	<label id = "label1" hidden="true"></label>
+	<input type="text" name="textarea1" id="textarea1" hidden="true">
+
+</br>
+</br>
+
+	<label id = "label2" hidden="true"></label>
+	<input type="text" name="textarea2" id="textarea2" hidden="true">
+</br>
+</br>
+
+	<label id = "label3" hidden="true"></label>
+	<input type="text" name="textarea3" id="textarea3" hidden="true">
+</form>
+</br>
+
+</br></br>
+	<button id="botonEnviar">Enviar</button>
+</form>
+</body>
+
+<script type="text/javascript">
+	var array = ["Cuadrado","Rectángulo", "Círculo", "Triángulo", "Polígono"];
+	var sel = document.getElementById("mySelect");
+
+	for (var i = 0; i < array.length; i++) {
+		sel.options[i+1].text = array[i];
+		sel.options[i+1].id = array[i];
+		sel.value[i+1].id = array[i];
+	}
+
+
+	function cambioSelect() {
+
+
+		var sel = document.getElementById("mySelect");
+		
+  		var textbox0 = document.getElementById("textarea0");
+  		var textbox1 = document.getElementById("textarea1");
+  		var textbox2 = document.getElementById("textarea2");
+  		var textbox3 = document.getElementById("textarea3");
+
+  		var label0 = document.getElementById("label0");
+		var label1 = document.getElementById("label1");
+		var label2 = document.getElementById("label2");
+		var label3 = document.getElementById("label3");
+		
+			
+		try {
+			textbox0.hidden = false;
+			label0.hidden = false;
+		 	document.getElementById('Borrar').remove();
+		} catch (error) {
+		  
+		}
+
+  		
+  		 
+  		if(sel.value == "Cuadrado"){
+			
+  			label1.hidden = false;
+  			label1.innerHTML = "Lado:";
+  			textbox1.hidden = false;
+
+  			label2.hidden = true;
+  			textbox2.hidden = true;
+
+  			label3.hidden = true;
+  			textbox3.hidden = true;
+
+  			label4.hidden = true;
+  			textbox4.hidden = true;
+  		}
+  		else if(sel.value == "Círculo"){
+			label1.hidden = false;
+  			label1.innerHTML = "Radio:";
+  			textbox1.hidden = false;
+
+  			label2.hidden = true;
+  			textbox2.hidden = true;
+
+  			label3.hidden = true;
+  			textbox3.hidden = true;
+  		}
+  		else if(sel.value == "Rectángulo" || sel.value == "Triángulo"){
+ 			label1.hidden = false;
+  			label1.innerHTML = "Base:";
+  			textbox1.hidden = false;
+
+  			label2.hidden = false;
+  			label2.innerHTML = "Altura";
+  			textbox2.hidden = false;
+
+  			label3.hidden = true;
+  			textbox3.hidden = true;
+  		}
+  		else if(sel.value == "Polígono"){
+  			label1.hidden = false;
+  			label1.innerHTML = "Lado:";
+  			textbox1.hidden = false;
+
+  			label2.hidden = false;
+  			label2.innerHTML = "Nro de lados:";
+  			textbox2.hidden = false;
+
+  			label3.hidden = false;
+  			label3.innerHTML = "Apotema:";
+  			textbox3.hidden = false;
+
+  		}
+	}
+
+
+</script>
+
+
+</html>
